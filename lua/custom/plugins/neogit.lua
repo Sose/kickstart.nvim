@@ -6,8 +6,16 @@ return {
 
     -- Only one of these is needed.
     'nvim-telescope/telescope.nvim', -- optional
-    'ibhagwan/fzf-lua', -- optional
-    'echasnovski/mini.pick', -- optional
   },
   config = true,
+  keys = {
+    {
+      '<leader>g',
+      function()
+        require('neogit').open { cwd = '%:p:h' }
+      end,
+      mode = '',
+      desc = '[g]it',
+    },
+  },
 }
