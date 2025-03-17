@@ -339,6 +339,16 @@ require('lazy').setup({
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
+    keys = {
+      {
+        '<leader>?',
+        function()
+          require('which-key').show { global = false }
+        end,
+        mode = 'n',
+        desc = 'Show buffer local keymaps',
+      },
+    },
   },
 
   -- NOTE: Plugins can specify dependencies.

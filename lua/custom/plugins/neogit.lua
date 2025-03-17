@@ -14,7 +14,7 @@ return {
       function()
         require('neogit').open { cwd = '%:p:h' }
       end,
-      mode = '',
+      mode = 'n',
       desc = '[g]it',
     },
   },
